@@ -33,7 +33,7 @@ void setup () {
 
   //enemy
   enemyImg=loadImage("img/enemy.png");
-  enemyX=-325;
+  enemyX=0;
   enemyY=random(45,410);
 
   //background
@@ -101,10 +101,11 @@ void draw() {
     image(enemyImg,enemyX+i*65-325,enemyY);
     }
     enemyX+=4;
-    if(enemyX==640){
+    if(enemyX>=965){
         enemyY=random(45,415);
      }
-     enemyX%=640;
+     enemyX%=965;
+     
   //move
   if(upPressed){
     fighterY-=fighterSpeed;
